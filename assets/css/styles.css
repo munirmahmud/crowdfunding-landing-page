@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&family=Manrope:wght@200;300;400;500;700;800&display=swap');
+
 /* Universal selector */
 * {
     margin: 0;
@@ -17,6 +19,8 @@ body {
     background-color: var(--bg-color);
     background-color: blueviolet;
     color: var(--dark-gray);
+    font-family: 'Commissioner', sans-serif;
+    font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6 {
     color: var(--black);
@@ -87,20 +91,28 @@ header {
     display: flex;
     justify-content: space-between;
 }
-.buttons button {
+button:disabled, button:disabled:hover {
+    background-color: #ddd;
+    cursor: default;
+}
+
+.btn {
     border: 0;
     background-color: hsl(176deg 59% 50% / 10%);
     border-radius: 100px;
     cursor: pointer;
-    padding: 8px 20px;
-    height: 50px;
+    padding: 8px 30px;
+    height: 45px;
     color: white;
+    transition: background-color 300ms ease-in-out;
 }
-
-.buttons button:first-child {
+.btn-primary {
     background-color: var(--moderate-cyan);
 }
-.buttons button:last-child {
+.btn-primary:hover {
+    background-color: hsl(176deg 53% 34%);
+}
+.btn-secondary {
     background-color: rgb(128 128 128 / 17%);    
     color: rgb(110, 106, 106);
     font-weight: 500;
@@ -142,17 +154,48 @@ header {
     position: relative;
 }
 .horizontal-bg {
-    background-color: red;
-    height: 8px;
-    border-radius: 30px;
+    background-color: #ddd;
 }
 .horizontal-bg2 {
-    background-color: green;
+    background-color: var(--dark-cyan);
+    width: 80%;
+}
+.horizontal-bg, .horizontal-bg2 {
     height: 8px;
     border-radius: 30px;
 }
 
+/* PROJECT DETAILS */
+.project-details h2, 
+.project-details p {
+    margin-bottom: 25px;
+}
 
+/* REWARD CARD */
+.reward-wrapper {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+.reward-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.reward-wrapper p {
+    margin-bottom: 20px;
+}
 
-
-
+.reward-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.reward-footer-left span {
+    font-size: 30px;
+    color: black;
+    font-weight: 700;
+    margin-right: 8px;
+}
