@@ -15,6 +15,7 @@
 
 body {
     background-color: var(--bg-color);
+    background-color: blueviolet;
     color: var(--dark-gray);
 }
 h1, h2, h3, h4, h5, h6 {
@@ -65,6 +66,7 @@ header {
     top: -80px;
     border-radius: 8px;
     padding: 25px;
+    margin-bottom: 25px;
 }
 .secondary-logo {
     position: absolute;
@@ -118,7 +120,37 @@ header {
 }
 
 
+.amount-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+.amount-col {
+    border-right: 1px solid #ddd;
+    padding-right: 8%;
+}
+.amount-col:last-child {
+    border-right: 0px solid transparent;
+}
+.amount-col strong {
+    font-size: 40px;
+    color: black;
+    display: block;
+}
 
+.horizontal-bar {
+    position: relative;
+}
+.horizontal-bg {
+    background-color: red;
+    height: 8px;
+    border-radius: 30px;
+}
+.horizontal-bg2 {
+    background-color: green;
+    height: 8px;
+    border-radius: 30px;
+}
 
 
 
